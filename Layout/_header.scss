@@ -1,0 +1,20 @@
+.l-header{
+    grid-area: header;
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .l-header__title{
+        
+    }
+    .l-header__search{
+        
+
+    }
+    @include ipad{
+      
+    }
+    @include iphone{
+
+    }
+}

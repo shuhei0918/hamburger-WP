@@ -1,0 +1,14 @@
+$ipad: 834px;
+$iphone: 375px;
+
+@mixin ipad {
+    @media(max-width:($ipad)){
+        @content;
+    }
+}
+
+@mixin iphone {
+    @media(max-width:($iphone)){
+        @content;
+    }
+}

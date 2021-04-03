@@ -1,0 +1,106 @@
+body {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
+  -ms-grid-rows: 217px auto 150px;
+      grid-template-rows: 217px auto 150px;
+      grid-template-areas: "header  sidebar" "main    sidebar" "footer  footer ";
+}
+
+@media (max-width: 834px) {
+  body {
+        grid-template-areas: "header  sidebar" "main    sidebat" "footer  sidebar";
+  }
+}
+
+ul li {
+  list-style: none;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+  color: #707070;
+}
+
+.l-footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: footer;
+  background-color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.l-header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  background-color: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.l-main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+  background-color: red;
+}
+
+.l-sidebar {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: sidebar;
+  background-color: green;
+}
+
+.c-button {
+  display: inline-block;
+  background-color: gray;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 3px;
+  border-color: #707070;
+}
+
+.c-button--small {
+  width: 136px;
+  margin-left: 14px;
+}
+
+@media (max-width: 834px) {
+  .c-button--small {
+    margin-left: 12px;
+    background-color: black;
+  }
+}
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,32 @@
+body{
+ width:100%;
+ height:100%;
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ line-height: 1.7;
+ display:grid;
+ grid-template-columns: 4fr 1fr;
+ grid-template-rows: 217px auto 150px;
+ grid-template-areas:
+            "header  sidebar"
+            "main    sidebar"
+            "footer  footer ";
+ @include ipad {
+     grid-template-areas:
+            "header  sidebar"
+            "main    sidebat"
+            "footer  sidebar";
+ }
+ @include iphone {
+
+ }
+}
+ul li{
+    list-style: none;
+    text-decoration: none;
+}
+a:link{
+    text-decoration: none;
+    color:#707070;
+}

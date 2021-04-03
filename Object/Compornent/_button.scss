@@ -1,0 +1,16 @@
+.c-button{
+    display:inline-block;
+    background-color: gray;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 3px;
+    border-color: #707070;
+}
+.c-button--small{
+    width:136px;
+    margin-left: 14px;
+    @include ipad{
+        margin-left: 12px;
+        background-color: black;
+    }
+}

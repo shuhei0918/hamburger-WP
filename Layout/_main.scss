@@ -1,0 +1,10 @@
+.l-main{
+    grid-area: main;
+    background-color: red;
+    @include ipad{
+        
+    }
+    @include iphone{
+        
+    }
+}
