@@ -5,23 +5,24 @@ body{
  margin: 0;
  padding: 0;
  line-height: 1.7;
- display:grid;
- grid-template-columns: 4fr 1fr;
- grid-template-rows: 217px auto 150px;
- grid-template-areas:
-            "header  sidebar"
-            "main    sidebar"
-            "footer  footer ";
- @include ipad {
-     grid-template-areas:
-            "header  sidebar"
-            "main    sidebat"
-            "footer  sidebar";
- }
- @include iphone {
+ display: flex;
+ position: relative;
 
+ @include ipad {
+     
+ }
+ @include pc {
+    display:grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 217px auto 150px;
+    grid-template-areas:
+               "header  sidebar"
+               "main    sidebar"
+               "footer  footer ";
+    
  }
 }
+
 ul li{
     list-style: none;
     text-decoration: none;

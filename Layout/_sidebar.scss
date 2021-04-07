@@ -1,10 +1,29 @@
 .l-sidebar{
-    grid-area:sidebar;
-    background-color: green;
-    @include ipad{
-        
+    left: 100%;
+    position: absolute;
+    overflow-x: hidden;
+    width:100vw;
+    display: flex;
+    .l-sidebar__hide{
+        width:23vw;
+        background: #000000;
+        opacity: .5;
+        @include ipad{
+        width:54%;    
+        }
+        @include pc{
+        display:none;
+        }
     }
-    @include iphone{
-        
+    .l-sidebar__main{
+        width:77vw;
+        background-color:#f2ede9;
+        @include ipad{
+            width:56vw;
+            }
+        }
+    @include pc{
+        position: static;
+        grid-area:sidebar;   
     }
 }

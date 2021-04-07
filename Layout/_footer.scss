@@ -1,6 +1,7 @@
 .l-footer{
-    grid-area:footer;
-    background-color: gray;
+    color:#ffffff;
+    height: 150px;
+    background-color: #9D8670;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,7 +9,7 @@
     @include ipad{
         
     }
-    @include iphone{
-        
+    @include pc{
+        grid-area:footer;   
     }
 }

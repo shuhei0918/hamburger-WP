@@ -1,0 +1,10 @@
+.c-form{
+    display: block;
+    width:72%;
+    background-color: #ffffff;
+    border:solid 1px #707070;
+    border-radius:5px;
+        @include ipad{
+            width:65%;
+        }
+}

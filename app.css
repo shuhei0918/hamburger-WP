@@ -6,18 +6,21 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.7;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 4fr 1fr;
-      grid-template-columns: 4fr 1fr;
-  -ms-grid-rows: 217px auto 150px;
-      grid-template-rows: 217px auto 150px;
-      grid-template-areas: "header  sidebar" "main    sidebar" "footer  footer ";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
 }
 
-@media (max-width: 834px) {
+@media (min-width: 835px) {
   body {
-        grid-template-areas: "header  sidebar" "main    sidebat" "footer  sidebar";
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 4fr 1fr;
+        grid-template-columns: 4fr 1fr;
+    -ms-grid-rows: 217px auto 150px;
+        grid-template-rows: 217px auto 150px;
+        grid-template-areas: "header  sidebar" "main    sidebar" "footer  footer ";
   }
 }
 
@@ -32,11 +35,9 @@ a:link {
 }
 
 .l-footer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: footer;
-  background-color: gray;
+  color: #ffffff;
+  height: 150px;
+  background-color: #9D8670;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,55 +53,154 @@ a:link {
           align-items: center;
 }
 
+@media (min-width: 835px) {
+  .l-footer {
+    grid-area: footer;
+  }
+}
+
 .l-header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: header;
-  background-color: blue;
+  height: 100vh;
+  width: 100vw;
+  color: #707070;
+  height: 217px;
+  background-color: #FFF7EF;
+}
+
+@media (min-width: 835px) {
+  .l-header {
+    grid-area: header;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.l-header h1 {
+  display: inline-block;
+  padding-top: 40px;
+  margin: 0 auto;
+}
+
+.l-header .l-header__search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 85vw;
+  padding: 40px 7% 0px 5%;
+}
+
+@media (min-width: 376px) {
+  .l-header .l-header__search {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .l-main {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: main;
-  background-color: red;
+  background-color: #FFFDFA;
+}
+
+@media (min-width: 835px) {
+  .l-main {
+    grid-area: main;
+  }
 }
 
 .l-sidebar {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 2;
-  grid-area: sidebar;
-  background-color: green;
+  left: 100%;
+  position: absolute;
+  overflow-x: hidden;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.l-sidebar .l-sidebar__hide {
+  width: 23vw;
+  background: #000000;
+  opacity: .5;
+}
+
+@media (min-width: 376px) {
+  .l-sidebar .l-sidebar__hide {
+    width: 54%;
+  }
+}
+
+@media (min-width: 835px) {
+  .l-sidebar .l-sidebar__hide {
+    display: none;
+  }
+}
+
+.l-sidebar .l-sidebar__main {
+  width: 77vw;
+  background-color: #f2ede9;
+}
+
+@media (min-width: 376px) {
+  .l-sidebar .l-sidebar__main {
+    width: 56vw;
+  }
+}
+
+@media (min-width: 835px) {
+  .l-sidebar {
+    position: static;
+    grid-area: sidebar;
+  }
 }
 
 .c-button {
   display: inline-block;
-  background-color: gray;
+  background-color: #F2EDE9;
   font-size: 16px;
   font-weight: bold;
-  border-radius: 3px;
-  border-color: #707070;
+  border-radius: 5px;
+  border: solid 1px #707070;
 }
 
 .c-button--small {
-  width: 136px;
-  margin-left: 14px;
+  width: 28%;
+  margin-left: 4%;
 }
 
-@media (max-width: 834px) {
+@media (min-width: 376px) {
   .c-button--small {
-    margin-left: 12px;
-    background-color: black;
+    width: 136px;
+  }
+}
+
+@media (min-width: 835px) {
+  .c-button--small {
+    margin: 0 30px 0 14px;
+  }
+}
+
+.c-form {
+  display: block;
+  width: 72%;
+  background-color: #ffffff;
+  border: solid 1px #707070;
+  border-radius: 5px;
+}
+
+@media (min-width: 376px) {
+  .c-form {
+    width: 65%;
   }
 }
 /*# sourceMappingURL=app.css.map */
