@@ -1,10 +1,20 @@
 .c-form{
+    font-size: 7vh;
+    font-weight: 400;
     display: block;
-    width:72%;
+    height:12vw;
+    width:60vw;
     background-color: #ffffff;
     border:solid 1px #707070;
-    border-radius:5px;
+    border-radius:8px;
         @include ipad{
-            width:65%;
+            font-size: 2.8vw;
+            width:46.5vw;
+            height:5.7vw;
+        }
+        @include pc{
+            width: 21vw;
+            font-size: 1.5vw;
+            height:2.4vw;
         }
 }

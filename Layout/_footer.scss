@@ -1,4 +1,5 @@
 .l-footer{
+    grid-area:footer; 
     color:#ffffff;
     height: 150px;
     background-color: #9D8670;
@@ -10,6 +11,17 @@
         
     }
     @include pc{
-        grid-area:footer;   
+  
     }
+    a{
+        font-size: 1vw;
+        line-height: 4;
+    }
+    p{
+        font-size:0.6vw;
+    }
+
+}
+.l-footer is-open{
+    position: fixed;
 }

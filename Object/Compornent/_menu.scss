@@ -1,0 +1,57 @@
+.c-menu__open{
+font-size: 5vw;
+font-weight: 600;
+font-family: 'Roboto', sans-serif;
+position: absolute;
+top:3vw;
+left:83vw;
+@include ipad{
+    font-size: 4vw;
+    top:2vw;
+    left:87vw
+}
+@include pc{
+    font-size:1.7vw;
+    font-weight: 600;
+    top:3.8vw;
+    left:82.2vw;
+}
+}
+
+#c-menu__open{
+    display: none;
+}
+
+.c-menu__close{
+    position: relative;
+}
+
+.c-menu__close span:before,
+.c-menu__close span:after{
+    top:3vw;
+    right:-75vw;
+    position: absolute;
+    display:block;
+    content: "";
+    background-color: #707070;
+    width:1.5vw;
+    height:11vw;
+    @include ipad{
+        width:0.7vw;
+        height:5.5vw;
+        top:3vw;
+        right:-38vw;
+    }
+    @include pc{
+        display: none;
+    }
+}
+.c-menu__close span:before{
+    transform: rotate(45deg);
+}
+.c-menu__close span:after{
+    transform: rotate(-45deg);
+}
+#c-menu__close{
+    display: none;
+}

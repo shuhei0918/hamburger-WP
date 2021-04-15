@@ -1,29 +1,78 @@
 .l-sidebar{
-    left: 100%;
     position: absolute;
+    grid-area:sidebar;   
+    font-family: 'M PLUS 1p', sans-serif;
+    color: #707070;
+    text-decoration: none;
+    height: auto;
     overflow-x: hidden;
     width:100vw;
     display: flex;
     .l-sidebar__hide{
-        width:23vw;
+        width:18vw;
         background: #000000;
         opacity: .5;
         @include ipad{
-        width:54%;    
+        width:58vw;    
         }
         @include pc{
         display:none;
         }
     }
-    .l-sidebar__main{
-        width:77vw;
+    .l-sidebar__gmenu{
+        width:82vw;
         background-color:#f2ede9;
         @include ipad{
-            width:56vw;
+            width:42vw;
             }
         }
     @include pc{
+        width:100%;
         position: static;
-        grid-area:sidebar;   
+
     }
+.l-sidebar__main{
+    padding-top: 10vw;
+}
+.l-sidebar__main li{
+    padding-left: 12%;
+    padding-bottom: 1%;
+    a{
+        display: block;
+        line-height: 3.6;
+        font-weight: 700;
+        font-size:5.8vw;
+        @include ipad{
+            font-size: 2.7vw;
+            line-height: 3.4;
+        }
+        @include pc{
+            font-size: 1.2vw;
+            line-height: 4;
+        }
+    }
+}
+.l-sidebar__sub li{
+    padding-left: 10%;
+    padding-bottom: 0px;
+    a{
+        margin-bottom: 0px;
+        font-weight: 400;
+        font-size: 5vw;
+        line-height: 2.6;
+        @include ipad{
+            font-size: 2.6vw;
+            line-height:2.3;
+        }
+        @include pc{
+            font-size: 1vw;
+            line-height: 2.6;    
+        }
+    }
+}
+
+}
+.l-sidebar.is-open{
+    left:-100%;
+    transition-duration: 2s;
 }

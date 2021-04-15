@@ -1,32 +1,53 @@
 .l-header{
-    height:100vh;
+    grid-area:header;
+    height:auto;
     width:100vw;
     color:#707070;
-    height:217px;
     background-color: #FFF7EF;
+    padding-bottom: 10%;
     @include ipad{
-        
+     padding-bottom: 4.6%;   
     }
     @include pc{
-        grid-area: header;
+        width:100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding-bottom: 0;
     }
     h1{
-        display: inline-block;
-        padding-top: 40px;
-        margin:0 auto;
+        font-family: 'Roboto', sans-serif;
+        font-size: 10vw;
+        line-height: 3.3;
+        text-align: center;
+        @include ipad{
+            font-size: 4.8vw;
+            line-height:3;
+        }
+        @include pc{
+            padding-left: 42px;
+            font-weight: 700;
+            font-size: 3.4vw;
+            line-height: 0;
+        }
 
     }
     .l-header__search{
         display: flex;
         justify-content: center;
-        width:85vw;
-        padding: 40px 7% 0px 5%;
+        width:100%;
+        padding: 0px 7% 0px 5%;
         @include ipad{
+            padding: 0px 6% 0px 4%;
             flex-direction: row;
+        }
+        @include pc{
+            justify-content: flex-end;
+            padding:0px;
         }
 
     }
+}
+.l-header is-open{
+    position: fixed;
 }

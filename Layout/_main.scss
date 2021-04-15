@@ -1,10 +1,13 @@
 .l-main{
-    
+    grid-area: main;  
     background-color: #FFFDFA;
     @include ipad{
         
     }
     @include pc{
-        grid-area: main;  
+
     }
+}
+.l-main is-open{
+    position: fixed;
 }
