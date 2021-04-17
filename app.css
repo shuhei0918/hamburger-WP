@@ -13,15 +13,15 @@ body {
   display: grid;
   -ms-grid-columns: 100vw 100vw;
       grid-template-columns: 100vw 100vw;
-  -ms-grid-rows: 57vw 3000px 150px;
-      grid-template-rows: 57vw 3000px 150px;
+  -ms-grid-rows: 57vw auto 150px;
+      grid-template-rows: 57vw auto 150px;
       grid-template-areas: "header  sidebar" "main    sidebar" "footer  sidebar";
 }
 
 @media (min-width: 376px) {
   body {
-    -ms-grid-rows: 28vw 3000px 150px;
-        grid-template-rows: 28vw 3000px 150px;
+    -ms-grid-rows: 28vw auto 150px;
+        grid-template-rows: 28vw auto 150px;
   }
 }
 
@@ -31,8 +31,8 @@ body {
     display: grid;
     -ms-grid-columns: 4.2fr 1fr;
         grid-template-columns: 4.2fr 1fr;
-    -ms-grid-rows: 11vw 3000px 150px;
-        grid-template-rows: 11vw 3000px 150px;
+    -ms-grid-rows: 11vw auto 150px;
+        grid-template-rows: 11vw auto 150px;
         grid-template-areas: "header  sidebar" "main    sidebar" "footer  footer ";
   }
 }
@@ -78,7 +78,7 @@ a:link {
   font-size: 0.6vw;
 }
 
-.l-footer is-open {
+.l-footer.is-open {
   position: fixed;
 }
 
@@ -168,23 +168,29 @@ a:link {
   }
 }
 
-.l-header is-open {
-  position: fixed;
+.l-header.is-open {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .l-main {
+  position: static;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: main;
   background-color: #FFFDFA;
 }
 
-.l-main is-open {
-  position: fixed;
+.l-main.is-open {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 57vw;
 }
 
 .l-sidebar {
   position: absolute;
+  left: 0%;
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 2;
@@ -192,12 +198,15 @@ a:link {
   font-family: 'M PLUS 1p', sans-serif;
   color: #707070;
   text-decoration: none;
-  height: auto;
   overflow-x: hidden;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .l-sidebar .l-sidebar__hide {
@@ -231,6 +240,7 @@ a:link {
 
 @media (min-width: 835px) {
   .l-sidebar {
+    height: 100%;
     width: 100%;
     position: static;
   }
@@ -294,8 +304,10 @@ a:link {
 
 .l-sidebar.is-open {
   left: -100%;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
+  -webkit-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .c-button {
@@ -372,7 +384,7 @@ a:link {
   .c-menu__open {
     font-size: 4vw;
     top: 2vw;
-    left: 87vw;
+    left: 86vw;
   }
 }
 
@@ -396,7 +408,7 @@ a:link {
 .c-menu__close span:before,
 .c-menu__close span:after {
   top: 3vw;
-  right: -75vw;
+  right: -73vw;
   position: absolute;
   display: block;
   content: "";
@@ -411,7 +423,7 @@ a:link {
     width: 0.7vw;
     height: 5.5vw;
     top: 3vw;
-    right: -38vw;
+    right: -36vw;
   }
 }
 

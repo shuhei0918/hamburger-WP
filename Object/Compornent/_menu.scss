@@ -8,7 +8,7 @@ left:83vw;
 @include ipad{
     font-size: 4vw;
     top:2vw;
-    left:87vw
+    left:86vw
 }
 @include pc{
     font-size:1.7vw;
@@ -29,7 +29,7 @@ left:83vw;
 .c-menu__close span:before,
 .c-menu__close span:after{
     top:3vw;
-    right:-75vw;
+    right:-73vw;
     position: absolute;
     display:block;
     content: "";
@@ -40,7 +40,7 @@ left:83vw;
         width:0.7vw;
         height:5.5vw;
         top:3vw;
-        right:-38vw;
+        right:-36vw;
     }
     @include pc{
         display: none;

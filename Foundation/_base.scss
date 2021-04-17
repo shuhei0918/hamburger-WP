@@ -10,23 +10,22 @@ font-size: 16px;
  position: relative;
 display: grid;
 grid-template-columns: 100vw 100vw;
-grid-template-rows: 57vw 3000px 150px;   
+grid-template-rows: 57vw auto 150px;   
 grid-template-areas:
             "header  sidebar"
             "main    sidebar"
             "footer  sidebar";
  @include ipad {
-    grid-template-rows: 28vw 3000px 150px;   
+    grid-template-rows: 28vw auto 150px;   
  }
  @include pc {
     display:grid;
     grid-template-columns: 4.2fr 1fr;
-    grid-template-rows: 11vw 3000px 150px;
+    grid-template-rows: 11vw auto 150px;
     grid-template-areas:
                "header  sidebar"
                "main    sidebar"
-               "footer  footer ";
-    
+               "footer  footer "; 
  }
 }
 

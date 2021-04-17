@@ -1,4 +1,5 @@
 .l-main{
+    position: static;
     grid-area: main;  
     background-color: #FFFDFA;
     @include ipad{
@@ -8,6 +9,7 @@
 
     }
 }
-.l-main is-open{
-    position: fixed;
+.l-main.is-open{
+    position: sticky;
+    top:57vw;
 }

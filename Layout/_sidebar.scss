@@ -1,13 +1,15 @@
 .l-sidebar{
     position: absolute;
+    left:0%;
     grid-area:sidebar;   
     font-family: 'M PLUS 1p', sans-serif;
     color: #707070;
     text-decoration: none;
-    height: auto;
     overflow-x: hidden;
     width:100vw;
     display: flex;
+    transition-property: left;
+    transition-duration: 0.5s;
     .l-sidebar__hide{
         width:18vw;
         background: #000000;
@@ -27,6 +29,7 @@
             }
         }
     @include pc{
+        height:100%;
         width:100%;
         position: static;
 
@@ -74,5 +77,6 @@
 }
 .l-sidebar.is-open{
     left:-100%;
-    transition-duration: 2s;
+    transition-property:left;
+    transition-duration: 0.5s;
 }
