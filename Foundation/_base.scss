@@ -8,25 +8,21 @@ font-size: 16px;
  padding: 0;
  line-height: 1.7;
  position: relative;
-display: grid;
-grid-template-columns: 100vw 100vw;
-grid-template-rows: 57vw auto 150px;   
-grid-template-areas:
-            "header  sidebar"
-            "main    sidebar"
-            "footer  sidebar";
- @include ipad {
-    grid-template-rows: 28vw auto 150px;   
- }
+
  @include pc {
     display:grid;
     grid-template-columns: 4.2fr 1fr;
-    grid-template-rows: 11vw auto 150px;
+    grid-template-rows: auto auto;
     grid-template-areas:
-               "header  sidebar"
-               "main    sidebar"
+               "main  sidebar"
                "footer  footer "; 
  }
+}
+
+.l-base{
+    @include pc{
+    grid-area: main;
+}
 }
 
 ul li{
@@ -36,4 +32,7 @@ ul li{
 a:link{
     text-decoration: none;
     color:#707070;
+}
+body.is-open{
+    position: fixed;
 }

@@ -1,15 +1,12 @@
 .l-main{
-    position: static;
-    grid-area: main;  
+    height:2000px;
+    width:100vw;
     background-color: #FFFDFA;
     @include ipad{
         
     }
     @include pc{
+        width:100%;
 
     }
-}
-.l-main.is-open{
-    position: sticky;
-    top:57vw;
 }

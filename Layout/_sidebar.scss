@@ -1,15 +1,18 @@
 .l-sidebar{
     position: absolute;
-    left:0%;
+    top:0;
+    left:100%;
     grid-area:sidebar;   
     font-family: 'M PLUS 1p', sans-serif;
     color: #707070;
     text-decoration: none;
     overflow-x: hidden;
-    width:100vw;
+    width:100%;
     display: flex;
     transition-property: left;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
+    height:100%;
+
     .l-sidebar__hide{
         width:18vw;
         background: #000000;
@@ -29,6 +32,8 @@
             }
         }
     @include pc{
+        position: static;
+        grid-area: sidebar;
         height:100%;
         width:100%;
         position: static;
@@ -36,6 +41,7 @@
     }
 .l-sidebar__main{
     padding-top: 10vw;
+    padding-bottom: 10vw;
 }
 .l-sidebar__main li{
     padding-left: 12%;
@@ -76,7 +82,8 @@
 
 }
 .l-sidebar.is-open{
-    left:-100%;
+    left:0;
     transition-property:left;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
+    height: 100%;
 }
