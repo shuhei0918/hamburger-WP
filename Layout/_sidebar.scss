@@ -1,17 +1,14 @@
 .l-sidebar{
-    position: absolute;
+    position: fixed;
     top:0;
-    left:100%;
-    grid-area:sidebar;   
+    left:100%; 
     font-family: 'M PLUS 1p', sans-serif;
     color: #707070;
     text-decoration: none;
-    overflow-x: hidden;
     width:100%;
     display: flex;
     transition-property: left;
     transition-duration: 0.2s;
-    height:100%;
 
     .l-sidebar__hide{
         width:18vw;
@@ -36,7 +33,6 @@
         grid-area: sidebar;
         height:100%;
         width:100%;
-        position: static;
 
     }
 .l-sidebar__main{
@@ -82,8 +78,11 @@
 
 }
 .l-sidebar.is-open{
+    display: flex;
+    position: absolute;
     left:0;
-    transition-property:left;
+    transition-property:display,left;
     transition-duration: 0.2s;
-    height: 100%;
+    height: 100vh;
+    overflow-y: scroll;
 }

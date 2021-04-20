@@ -2,7 +2,7 @@
     display:inline-block;
     height: 12vw;
     background-color: #F2EDE9;
-    font-size: 3.8vh;
+    font-size: 4vw;
     font-weight: bold;
     border-radius: 8px;
     border: solid 1px #707070;
@@ -12,13 +12,13 @@
     width:20vw;
     margin-left: 2.6vw;
     @include ipad{
-        font-size:2.4vh;
+        font-size:1.8vw;
         width:16vw;
         height:5.7vw;
         margin-left: 1.5vw;
     }
     @include pc{
-        font-size: 1.8vh;
+        font-size: 0.8vw;
         width: 6.8vw;
         min-width: 72px;
         height:2.4vw;

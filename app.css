@@ -15,8 +15,8 @@ body {
   body {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 4.2fr 1fr;
-        grid-template-columns: 4.2fr 1fr;
+    -ms-grid-columns: 80vw 20vw;
+        grid-template-columns: 80vw 20vw;
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
         grid-template-areas: "main  sidebar" "footer  footer ";
@@ -164,7 +164,7 @@ body.is-open {
 }
 
 .l-main {
-  height: 2000px;
+  height: 100px;
   width: 100vw;
   background-color: #FFFDFA;
 }
@@ -176,14 +176,12 @@ body.is-open {
 }
 
 .l-sidebar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 100%;
-  grid-area: sidebar;
   font-family: 'M PLUS 1p', sans-serif;
   color: #707070;
   text-decoration: none;
-  overflow-x: hidden;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -192,7 +190,6 @@ body.is-open {
   transition-property: left;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
-  height: 100%;
 }
 
 .l-sidebar .l-sidebar__hide {
@@ -230,7 +227,6 @@ body.is-open {
     grid-area: sidebar;
     height: 100%;
     width: 100%;
-    position: static;
   }
 }
 
@@ -292,19 +288,24 @@ body.is-open {
 }
 
 .l-sidebar.is-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
   left: 0;
-  -webkit-transition-property: left;
-  transition-property: left;
+  -webkit-transition-property: display,left;
+  transition-property: display,left;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
-  height: 100%;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .c-button {
   display: inline-block;
   height: 12vw;
   background-color: #F2EDE9;
-  font-size: 3.8vh;
+  font-size: 4vw;
   font-weight: bold;
   border-radius: 8px;
   border: solid 1px #707070;
@@ -317,7 +318,7 @@ body.is-open {
 
 @media (min-width: 376px) {
   .c-button--small {
-    font-size: 2.4vh;
+    font-size: 1.8vw;
     width: 16vw;
     height: 5.7vw;
     margin-left: 1.5vw;
@@ -326,7 +327,7 @@ body.is-open {
 
 @media (min-width: 835px) {
   .c-button--small {
-    font-size: 1.8vh;
+    font-size: 0.8vw;
     width: 6.8vw;
     min-width: 72px;
     height: 2.4vw;
@@ -335,7 +336,7 @@ body.is-open {
 }
 
 .c-form {
-  font-size: 7vh;
+  font-size: 8vw;
   font-weight: 400;
   display: block;
   height: 12vw;
