@@ -9,6 +9,7 @@
     display: flex;
     transition-property: left;
     transition-duration: 0.2s;
+    height: 100vh;
 
     .l-sidebar__hide{
         width:18vw;
@@ -83,6 +84,5 @@
     left:0;
     transition-property:display,left;
     transition-duration: 0.2s;
-    height: 100vh;
     overflow-y: scroll;
 }
