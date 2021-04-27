@@ -1,25 +1,22 @@
-.l-footer{
+.l-footer {
     height: 150px;
-    color:#ffffff;
+    color: #ffffff;
     height: 150px;
-    background-color: #9D8670;
+    background-color: #9d8670;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @include ipad{
-        
+    @include ipad {
     }
-    @include pc{
-        grid-area:footer; 
-  
+    @include pc {
+        grid-area: footer;
     }
-    a{
+    a {
         font-size: 1vw;
         line-height: 4;
     }
-    p{
-        font-size:0.6vw;
+    p {
+        font-size: 0.6vw;
     }
-
 }

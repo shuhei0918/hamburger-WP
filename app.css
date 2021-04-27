@@ -1,8 +1,8 @@
 body {
-  font-family: 'M PLUS 1p', sans-serif;
+  font-family: "M PLUS 1p", sans-serif;
   font-size: 16px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -47,7 +47,7 @@ body.is-open {
   height: 150px;
   color: #ffffff;
   height: 150px;
-  background-color: #9D8670;
+  background-color: #9d8670;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,7 +82,7 @@ body.is-open {
   height: 57vw;
   width: 100vw;
   color: #707070;
-  background-color: #FFF7EF;
+  background-color: #fff7ef;
   padding-bottom: 10%;
 }
 
@@ -111,7 +111,7 @@ body.is-open {
 }
 
 .l-header h1 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 10vw;
   line-height: 3.3;
   text-align: center;
@@ -166,7 +166,7 @@ body.is-open {
 .l-main {
   height: 100%;
   width: 100vw;
-  background-color: #FFFDFA;
+  background-color: #fffdfa;
 }
 
 @media (min-width: 835px) {
@@ -179,7 +179,7 @@ body.is-open {
   position: fixed;
   top: 0;
   left: 100%;
-  font-family: 'M PLUS 1p', sans-serif;
+  font-family: "M PLUS 1p", sans-serif;
   color: #707070;
   text-decoration: none;
   width: 100%;
@@ -190,13 +190,13 @@ body.is-open {
   transition-property: left;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
-  height: 100vh;
+  height: 100%;
 }
 
 .l-sidebar .l-sidebar__hide {
   width: 18vw;
   background: #000000;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 @media (min-width: 376px) {
@@ -222,6 +222,21 @@ body.is-open {
   }
 }
 
+.l-sidebar .l-sidebar__gmenu h2 {
+  display: none;
+}
+
+@media (min-width: 835px) {
+  .l-sidebar .l-sidebar__gmenu h2 {
+    display: inline;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.7vw;
+    font-weight: 600;
+    line-height: 11vw;
+    padding-left: 2vw;
+  }
+}
+
 @media (min-width: 835px) {
   .l-sidebar {
     position: static;
@@ -234,6 +249,12 @@ body.is-open {
 .l-sidebar .l-sidebar__main {
   padding-top: 10vw;
   padding-bottom: 10vw;
+}
+
+@media (min-width: 835px) {
+  .l-sidebar .l-sidebar__main {
+    padding-top: 0;
+  }
 }
 
 .l-sidebar .l-sidebar__main li {
@@ -294,11 +315,15 @@ body.is-open {
   display: flex;
   position: absolute;
   left: 0;
-  -webkit-transition-property: display,left;
-  transition-property: display,left;
+  -webkit-transition-property: display, left;
+  transition-property: display, left;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
-  overflow-y: scroll;
+}
+
+.l-sidebar.is-open .l-sidebar__gmenu {
+  overflow: scroll;
+  min-height: 100vh;
 }
 
 .c-button {
@@ -365,7 +390,7 @@ body.is-open {
 .c-menu__open {
   font-size: 5vw;
   font-weight: 600;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   position: absolute;
   top: 3vw;
   left: 83vw;
@@ -381,10 +406,7 @@ body.is-open {
 
 @media (min-width: 835px) {
   .c-menu__open {
-    font-size: 1.7vw;
-    font-weight: 600;
-    top: 3.8vw;
-    left: 82.2vw;
+    display: none;
   }
 }
 
@@ -437,5 +459,112 @@ body.is-open {
 
 #c-menu__close {
   display: none;
+}
+
+.c-card-index {
+  width: 85vw;
+  height: 162vw;
+  background-color: rosybrown;
+  margin-bottom: 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.c-card-index h2 {
+  color: #ffffff;
+  font-size: 10vw;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  padding-left: 2.5vw;
+  line-height: 2;
+}
+
+.c-card-index .c-card-index__selectinfo .c-card-index__infobox {
+  background-color: #ffffff;
+  height: 40vw;
+  opacity: 0.5;
+  margin: 0 3vw 3vw;
+}
+
+.c-card-index .c-card-index__selectinfo .c-card-index__infobox h3 {
+  font-size: 5.4vw;
+  line-height: 2.8;
+  padding-left: 2.5vw;
+}
+
+.c-card-index .c-card-index__selectinfo .c-card-index__infobox p {
+  font-size: 4vw;
+  padding: 0 2.5vw;
+}
+
+.c-card-index__takeout {
+  background-image: url("img/index-takeout.png");
+  background-size: cover;
+}
+
+.c-card-index__eatin {
+  background-image: url("img/index-eatin.png");
+  background-size: cover;
+}
+
+.p-article__indextop {
+  width: 100vw;
+  height: 67vw;
+  background-image: url("img/index-top_iphone.png");
+  background-size: cover;
+}
+
+@media (min-width: 376px) {
+  .p-article__indextop {
+    background-image: url("img/index-top_ipad.png");
+    height: 33vw;
+  }
+}
+
+@media (min-width: 835px) {
+  .p-article__indextop {
+    background-image: url("img/index-top_pc.png");
+    background-size: contain;
+    height: 27.5vw;
+  }
+}
+
+.p-article__indextop h2 {
+  color: #ffffff;
+  font-size: 8.3vw;
+  padding-left: 5vw;
+  line-height: 7.5;
+}
+
+@media (min-width: 376px) {
+  .p-article__indextop h2 {
+    font-size: 4vw;
+    line-height: 9;
+    padding-left: 10vw;
+  }
+}
+
+@media (min-width: 835px) {
+  .p-article__indextop h2 {
+    font-size: 2vw;
+    padding-left: 4.5vw;
+    line-height: 13;
+  }
+}
+
+.p-article__menu {
+  margin: 5vw 5vw 13vw;
+}
+
+.p-article__map {
+  background-color: royalblue;
 }
 /*# sourceMappingURL=app.css.map */

@@ -1,12 +1,10 @@
-.l-main{
-    height:100%;
-    width:100vw;
-    background-color: #FFFDFA;
-    @include ipad{
-        
+.l-main {
+    height: 100%;
+    width: 100vw;
+    background-color: #fffdfa;
+    @include ipad {
     }
-    @include pc{
-        width:100%;
-
+    @include pc {
+        width: 100%;
     }
 }

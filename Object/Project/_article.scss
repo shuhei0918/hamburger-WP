@@ -1,0 +1,37 @@
+.p-article__indextop{
+width:100vw;
+height:67vw;
+background-image: url("img/index-top_iphone.png");
+background-size: cover;
+    @include ipad{
+        background-image: url("img/index-top_ipad.png");
+        height:33vw;
+    }   
+    @include pc{
+        background-image: url("img/index-top_pc.png");
+        background-size: contain;
+        height:27.5vw;
+    }
+    h2{
+        color:#ffffff;
+        font-size: 8.3vw;
+        padding-left: 5vw;
+        line-height:7.5;
+        @include ipad{
+            font-size:4vw;
+            line-height: 9;
+            padding-left: 10vw;
+        }
+        @include pc{
+            font-size: 2vw;
+            padding-left: 4.5vw;
+            line-height: 13;
+        }
+    }
+}
+.p-article__menu{
+    margin:5vw 5vw 13vw
+}
+.p-article__map{
+    background-color: royalblue;
+}

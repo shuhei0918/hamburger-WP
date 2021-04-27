@@ -1,0 +1,44 @@
+.c-card-index{
+    width: 85vw;
+    height: 162vw;
+    background-color: rosybrown;
+    margin-bottom: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   h2{
+       color: #ffffff;
+       font-size: 10vw;
+       font-family: "Roboto", sans-serif;
+       font-weight: 500;
+       padding-left: 2.5vw;
+       line-height: 2;
+   }
+   .c-card-index__selectinfo{
+       .c-card-index__infobox{
+           background-color: #ffffff;
+           height: 40vw;
+           opacity: 0.5;
+           margin:0 3vw 3vw;
+           h3{
+            font-size: 5.4vw;
+            line-height: 2.8;
+            padding-left: 2.5vw;
+           }
+           p{
+            font-size: 4vw;
+            padding: 0 2.5vw;
+           }
+       }
+
+   } 
+
+}
+.c-card-index__takeout{
+    background-image: url("img/index-takeout.png");
+    background-size: cover;
+}
+.c-card-index__eatin{
+    background-image: url("img/index-eatin.png");
+    background-size: cover;
+}
