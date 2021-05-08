@@ -1,0 +1,81 @@
+.p-top {
+    width: 100%;
+    height: 75.5vw;
+    background-size: cover;
+    @include ipad {
+        height: 34vw;
+    }
+    h2 {
+        color: #ffffff;
+    }
+    h3 {
+        color: #ffffff;
+    }
+}
+
+.p-top__index {
+    background-image: url("img/index-top_iphone.png");
+    @include ipad {
+        background-image: url("img/index-top_ipad.png");
+    }
+    @include pc {
+        background-image: url("img/index-top_pc.png");
+        background-size: contain;
+        height: 27.5vw;
+    }
+    h2 {
+        font-size: 8.3vw;
+        padding-left: 5vw;
+        line-height: 7.5;
+        @include ipad {
+            font-size: 4vw;
+            line-height: 9;
+            padding-left: 10vw;
+        }
+        @include pc {
+            font-size: 2vw;
+            padding-left: 4.5vw;
+            line-height: 13;
+        }
+    }
+}
+
+.p-top__archive {
+    background-image: url("img/archive-top_iphone.png");
+    background-color: rgba($color: #000000, $alpha: 1);
+    padding: 26vw 0 0 10vw;
+    h2 {
+        font-family: "Roboto", sans-serif;
+        font-size: 8.3vw;
+        letter-spacing: 0.08em;
+    }
+    h3 {
+        font-size: 4vw;
+    }
+    @include ipad {
+        display: flex;
+        padding: 0 0 0 10.2vw;
+        align-items: center;
+        background-image: url("img/archive-top_ipad.png");
+        h2 {
+            font-size: 7vw;
+        }
+        h3 {
+            font-size: 2.1vw;
+            padding:1vw 0 0 0.5vw;
+
+        }
+    }
+    @include pc{
+        background-image: url("img/archive-top_pc.png");
+        background-size: contain;
+        height: 12.4vw;
+        h2{
+            font-size: 3vw;
+        }
+        h3{
+            font-size:0.8vw;
+            padding:0 0 0 0.5vw
+        }
+    }
+}

@@ -1,0 +1,122 @@
+.p-pagenation {
+    margin: 2vw 4vw 8vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include ipad{
+        margin:12vw 12vw 4vw 14vw;
+        justify-content: space-around;
+    }
+    @include pc{
+        justify-content: center;
+        margin:8vw 0 3vw;
+    }
+    .p-pagenation__pageinfo {
+        display: none;
+        @include ipad{
+            width:12vw;
+            display:block;
+            font-size: 2vw;
+            color:#707070;
+            font-weight: 500;
+            font-family: "Roboto", sans-serif;
+            white-space: nowrap;
+        }
+        @include pc{
+            display: flex;
+            justify-content: flex-end;
+            width:3.5vw;
+            font-size: 0.9vw;
+        }
+    }
+    li {
+        .p-pagenation__prev {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width:3.4vw;
+            &::after {
+                white-space: nowrap;
+                font-size: 13px;
+                display: block;
+                content: " 前へ";
+                @include ipad{
+                    display:none;
+                }
+            }
+            span {
+                display: block;
+                width: 10px;
+                height: 10px;
+                border-left: solid #707070 1px;
+                border-bottom: solid #707070 1px;
+                transform: rotate(45deg);
+            }
+            @include pc{
+                width:2.2vw;
+            }
+        }
+        .p-pagenation__pagenumber {
+            display: none; 
+            @include ipad{
+                display:flex;
+                width: 25vw;
+                justify-content: center;
+                li{
+                    border:solid 1px #707070;
+                    margin:0 1.8%;
+                    a{
+                        display: block;
+                        text-align: center;
+                        width:3.4vw;
+                        font-size: 1vw;
+                        height:3.4vw;
+                        line-height:2.5;
+                    }
+                    @include pc{
+                        margin:0 0;
+                        a{
+                            width:1.7vw;
+                            height:1.7vw;
+                            font-size: 0.8vw;
+                            line-height: 2;
+                        }
+                    }
+                }
+                
+            }
+            @include pc{
+                width:22.5vw;
+                margin:0 2.5%;
+                justify-content: space-between;
+            }
+        }
+        .p-pagenation__next {
+            display:flex ;
+            align-items: center;
+            justify-content: flex-end;
+            width:3.4vw;
+            &::before {
+                white-space: nowrap;
+                font-size: 13px;
+                display:block;
+                content: "次へ";
+                @include ipad{
+                    display:none;
+                }
+            }
+            span {
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    border-top: solid #707070 1px;
+                    border-right: solid #707070 1px;
+                    transform: rotate(45deg);
+                }
+            @include pc{
+                width:2.7vw;
+            }
+            }
+        }
+    }
+

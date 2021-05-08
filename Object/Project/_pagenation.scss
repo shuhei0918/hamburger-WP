@@ -1,0 +1,95 @@
+.p-pagenation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15% 5% 5%;
+    @include ipad {
+        justify-content:space-around;
+        margin: 12% 10% 3%;
+    }
+    .p-pagenation__pageinfo {
+        display: none;
+        @include ipad {
+            display: flex;
+            font-size: 2vw;
+            font-family: "Roboto", sans-serif;
+            color:#707070;
+            margin-right: 3%;
+        }
+    }
+    .p-pagenation__pagenumber {
+        display: none;
+        @include ipad {
+            display: flex;
+            justify-content: space-around;
+            li{
+                border:1px #707070 solid;
+                margin: 0 2%;
+                a{
+                    display: block;
+                    font-size: 1vw;
+                    font-weight: bold;
+                    color: #707070;
+                    width:4vw;
+                    height:4vw;
+                    text-align: center;
+                    
+                } 
+            }
+        }
+    }
+    .p-pagenation__prev {
+        margin-right: 2%;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::after{
+                content:"前へ";
+                font-size: 4vw;
+                @include ipad{
+                    display:none;
+                }
+            }
+            span {
+                display: block;
+                width: 3vw;
+                height: 3vw;
+                border-bottom: 1px #707070 solid;
+                border-left: 1px #707070 solid;
+                transform: rotate(45deg);
+                @include ipad{
+                    width:1.3vw;
+                    height:1.3vw;
+                }
+            }
+        }
+    }
+    .p-pagenation__next {
+        margin-left: 2%;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::before{
+                content:"次へ";
+                font-size: 4vw;
+                @include ipad{
+                    display:none;
+                }
+            }
+            span {
+                display: block;
+                width: 3vw;
+                height: 3vw;
+                border-top: 1px #707070 solid;
+                border-right: 1px #707070 solid;
+                transform: rotate(45deg);
+                @include ipad{
+                    width:1.3vw;
+                    height:1.3vw;
+                }
+            }
+        }
+    }
+}

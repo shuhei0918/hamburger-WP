@@ -1,0 +1,91 @@
+.c-content-index {
+    width: 100%;
+    height: 162vw;
+    background-color: rosybrown;
+    background-size: contain;
+    margin-bottom: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 10%;
+        height: 0.6%;
+        background-color: #ffffff;
+        left: 2.5vw;
+        top: 12%;
+    }
+    @include ipad {
+        width: 41.5vw;
+        height: 79.5vw;
+    }
+    @include pc {
+        width: 32.8vw;
+        height: 77.8vw;
+    }
+    h2 {
+        color: #ffffff;
+        font-size: 10vw;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        padding-left: 2.5vw;
+        line-height: 2;
+        @include ipad {
+            font-size: 5vw;
+        }
+    }
+    .c-content-index__selectinfo {
+        .c-content-index__infobox {
+            background-color: #ffffff;
+            height: 40vw;
+            opacity: 0.8;
+            margin: 0 3vw 3vw;
+            @include ipad {
+                margin: 0 1.5vw 1.5vw;
+                height: 20vw;
+            }
+            @include pc {
+                height: 12vw;
+            }
+
+            h3 {
+                font-size: 5.4vw;
+                line-height: 2.8;
+                padding-left: 2.5vw;
+                @include ipad {
+                    font-size: 2.8vw;
+                    line-height: 3.2;
+                    padding-left: 1.8vw;
+                }
+                @include pc {
+                    font-size: 1.6vw;
+                    line-height: 3;
+                    padding-left: 1.4vw;
+                }
+            }
+            p {
+                font-size: 4vw;
+                padding: 0 2.5vw;
+                @include ipad {
+                    font-size: 2vw;
+                    padding: 0 1.8vw;
+                }
+                @include pc {
+                    font-size: 1.1vw;
+                    padding: 0 1.4vw;
+                }
+            }
+        }
+    }
+}
+.c-content-index__takeout {
+    background-image: url("img/index-takeout.png");
+    background-size: cover;
+}
+.c-content-index__eatin {
+    background-image: url("img/index-eatin.png");
+    background-size: cover;
+}

@@ -1,37 +1,54 @@
-.p-article__indextop{
-width:100vw;
-height:67vw;
-background-image: url("img/index-top_iphone.png");
-background-size: cover;
-    @include ipad{
-        background-image: url("img/index-top_ipad.png");
-        height:33vw;
-    }   
-    @include pc{
-        background-image: url("img/index-top_pc.png");
-        background-size: contain;
-        height:27.5vw;
+.p-article {
+    margin: 4.8vw 5vw 13vw;
+    @include ipad {
+        margin: 4.8vw 4.4vw 0.2vw;
     }
+    @include pc {
+        margin: 6vw 5.8vw 1.8vw;
+    }
+}
+
+.p-article__index {
+    @include ipad {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.p-article__archive{
+    color:#3C2A10;
     h2{
-        color:#ffffff;
-        font-size: 8.3vw;
-        padding-left: 5vw;
-        line-height:7.5;
-        @include ipad{
-            font-size:4vw;
-            line-height: 9;
-            padding-left: 10vw;
+        font-size:6.5vw;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        line-height: 16vw;
+
+    }
+    p{
+        font-size:4vw;
+        padding: 7vw 0 28vw;
+    }
+    @include ipad{
+        h2{
+            font-size:3.8vw;
+            line-height: 5.4vw;
+            letter-spacing: 0;
         }
-        @include pc{
+        p{
             font-size: 2vw;
-            padding-left: 4.5vw;
-            line-height: 13;
+            padding-top: 2.6vw;
         }
     }
-}
-.p-article__menu{
-    margin:5vw 5vw 13vw
-}
-.p-article__map{
-    background-color: royalblue;
+    @include pc{
+        margin: 1.6vw 4.8vw;
+        h2{
+            font-size:1.7vw;
+            line-height: 0;
+            padding-top: 2.6vw;
+        }
+        p{
+            font-size: 0.8vw;
+            padding: 2.6vw 0 3.8vw 0;
+        }
+    }
 }

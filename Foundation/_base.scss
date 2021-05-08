@@ -11,7 +11,7 @@ body {
 
     @include pc {
         display: grid;
-        grid-template-columns: 80vw 20vw;
+        grid-template-columns: 81.2% 18.8%;
         grid-template-rows: auto auto;
         grid-template-areas:
             "main  sidebar"

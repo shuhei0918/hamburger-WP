@@ -1,22 +1,37 @@
 .l-footer {
-    height: 150px;
+    height: 40vw;
     color: #ffffff;
-    height: 150px;
     background-color: #9d8670;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     @include ipad {
+        height:19vw;
     }
     @include pc {
         grid-area: footer;
+        height:7vw;
     }
     a {
-        font-size: 1vw;
-        line-height: 4;
+        font-size: 5vw;
+        padding:3% 0 9%;
+        @include ipad{
+            font-size: 2.2vw;
+            padding:1% 0 3%;
+        }
+        @include pc{
+            font-size:1vw;
+            padding:1% 0 1%;
+        }
     }
     p {
-        font-size: 0.6vw;
+        font-size: 3vw;
+        @include ipad{
+            font-size:1vw;
+        }
+        @include pc{
+            font-size:0.8vw;
+        }
     }
 }
