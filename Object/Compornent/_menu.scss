@@ -1,14 +1,13 @@
 .c-menu__open {
-    font-size: 5vw;
+    font-size: 20px;
     font-weight: 600;
     font-family: "Roboto", sans-serif;
     position: absolute;
-    top: 3vw;
-    left: 83vw;
+    top: 0%;
+    right: 4%;
     @include ipad {
-        font-size: 4vw;
-        top: 2vw;
-        left: 86vw;
+        font-size:34px;
+        right: 3%;
     }
     @include pc {
         display: none;

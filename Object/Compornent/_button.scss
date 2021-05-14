@@ -1,33 +1,25 @@
 .c-button{
     display:inline-block;
-    height: 12vw;
+    height: 46px;
     background-color: #F2EDE9;
-    font-size: 4vw;
+    font-size: 16px;
     font-weight: bold;
     border-radius: 8px;
     border: solid 1px #707070;
 
 }
 .c-button--small{
-    width:20vw;
-    margin-left: 2.6vw;
+    width:25%;
     @include ipad{
-        font-size:1.8vw;
-        width:16vw;
-        height:5.7vw;
-        margin-left: 1.5vw;
+   
     }
     @include pc{
-        font-size: 0.8vw;
-        width: 6.8vw;
-        min-width: 72px;
-        height:2.4vw;
-        margin:0 1.6vw 0 0.6vw;
     }
 }
 .c-button--archive{
     margin: 0 auto;
-    width:44vw;
+    width:48%;
+    height:12%;
     background-color: #ffffff;
     color: #707070;
     border-radius: 12vw;
@@ -57,4 +49,21 @@
 
     }
     
+}
+.c-button--single{
+    display: flex;
+    justify-content: center;
+    width:100%;
+    height:80px;
+    border-radius: 20px;
+    align-items: center;
+    color: #707070;
+    margin:30px 0;
+    font-size: 16px;
+    @include ipad{
+        width:60%;
+    }
+    @include pc{
+        width:31.5%;
+    }
 }

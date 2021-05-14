@@ -1,81 +1,123 @@
 .p-top {
+    display: flex;
     width: 100%;
-    height: 75.5vw;
     background-size: cover;
-    @include ipad {
-        height: 34vw;
-    }
-    h2 {
-        color: #ffffff;
-    }
+    align-items: center;
+    padding-left: 6%;
+    color:#ffffff;
+    h1,h2 {
+        font-size: 9.6vw;
+        }
     h3 {
-        color: #ffffff;
-    }
+        font-size: 4.2vw;
+        }
+    @include ipad{
+        h1 {
+            font-size: 7.2vw;
+            }
+        h2 {
+            font-size: 4.3vw;
+            }
+        h3 {
+            font-size: 1.9vw;
+            }   
+        }
+    @include pc{
+        h1 {
+            font-size: 3.15vw;
+            }
+        h2 {
+            font-size: 1.95vw;
+            }
+        h3 {
+            font-size: 0.85vw;
+            }   
+        }
+    
 }
 
 .p-top__index {
     background-image: url("img/index-top_iphone.png");
+    &::after {
+        content: "";
+        display: block;
+        padding-top: 76%;
+    }
     @include ipad {
         background-image: url("img/index-top_ipad.png");
+        &::after {
+            padding-top: 34%;
+        }
     }
     @include pc {
         background-image: url("img/index-top_pc.png");
-        background-size: contain;
-        height: 27.5vw;
-    }
-    h2 {
-        font-size: 8.3vw;
-        padding-left: 5vw;
-        line-height: 7.5;
-        @include ipad {
-            font-size: 4vw;
-            line-height: 9;
-            padding-left: 10vw;
-        }
-        @include pc {
-            font-size: 2vw;
-            padding-left: 4.5vw;
-            line-height: 13;
-        }
     }
 }
 
 .p-top__archive {
     background-image: url("img/archive-top_iphone.png");
     background-color: rgba($color: #000000, $alpha: 1);
-    padding: 26vw 0 0 10vw;
-    h2 {
-        font-family: "Roboto", sans-serif;
-        font-size: 8.3vw;
-        letter-spacing: 0.08em;
+    &::after {
+        content: "";
+        display: block;
+        padding-top: 76%;
     }
-    h3 {
-        font-size: 4vw;
+    h1 {
+        font-family: "Roboto", sans-serif;
+        letter-spacing: 0.08em;
     }
     @include ipad {
         display: flex;
-        padding: 0 0 0 10.2vw;
         align-items: center;
         background-image: url("img/archive-top_ipad.png");
-        h2 {
-            font-size: 7vw;
-        }
-        h3 {
-            font-size: 2.1vw;
-            padding:1vw 0 0 0.5vw;
-
+        &::after {
+            padding-top: 34%;
         }
     }
-    @include pc{
+    @include pc {
         background-image: url("img/archive-top_pc.png");
         background-size: contain;
-        height: 12.4vw;
-        h2{
-            font-size: 3vw;
+        &::after {
+            padding-top: 16%;
         }
-        h3{
-            font-size:0.8vw;
-            padding:0 0 0 0.5vw
+    }
+    .p-top__inner {
+        @include ipad {
+            display: flex;
+            align-items: center;
         }
+    }
+}
+.p-top__post::after{
+    content: "";
+    display:block;
+    padding-top: 60%;
+    @include ipad{
+        padding-top: 60%;
+    }
+    @include pc{
+        padding-top: 32%;
+    }
+}
+.p-top__single {
+    background-image: url("img/single-top_iphone.png");
+
+    @include ipad {
+        background-image: url("img/single-top_ipad.png");
+        background-size: cover;
+    }
+    @include pc {
+        background-image: url("img/single-top_pc.png");
+    }
+}
+.p-top__page {
+    background-image: url("img/page-top_iphone.png");
+
+    @include ipad {
+        background-image: url("img/page-top_ipad.png");
+        background-size: cover;
+    }
+    @include pc {
+        background-image: url("img/page-top_pc.png");
     }
 }

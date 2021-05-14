@@ -15,40 +15,45 @@
     }
 }
 
-.p-article__archive{
-    color:#3C2A10;
-    h2{
-        font-size:6.5vw;
+.p-article__archive {
+    color: #3c2a10;
+    h2 {
+        font-size: 6.5vw;
         font-weight: 400;
         letter-spacing: 0.04em;
         line-height: 16vw;
-
     }
-    p{
-        font-size:4vw;
+    p {
+        font-size: 4vw;
         padding: 7vw 0 28vw;
     }
-    @include ipad{
-        h2{
-            font-size:3.8vw;
+    @include ipad {
+        h2 {
+            font-size: 3.8vw;
             line-height: 5.4vw;
             letter-spacing: 0;
         }
-        p{
+        p {
             font-size: 2vw;
             padding-top: 2.6vw;
         }
     }
-    @include pc{
+    @include pc {
         margin: 1.6vw 4.8vw;
-        h2{
-            font-size:1.7vw;
+        h2 {
+            font-size: 1.7vw;
             line-height: 0;
             padding-top: 2.6vw;
         }
-        p{
+        p {
             font-size: 0.8vw;
             padding: 2.6vw 0 3.8vw 0;
         }
+    }
+}
+.p-article__single{
+    margin-top: 0;
+    @include ipad{
+        margin-top:30px;
     }
 }

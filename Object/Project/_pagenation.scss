@@ -4,8 +4,11 @@
     align-items: center;
     margin: 15% 5% 5%;
     @include ipad {
-        justify-content:space-around;
-        margin: 12% 10% 3%;
+        justify-content: center;
+        margin: 10% 10% 4%;
+        li {
+            margin: 0 1%;
+        }
     }
     .p-pagenation__pageinfo {
         display: none;
@@ -13,83 +16,111 @@
             display: flex;
             font-size: 2vw;
             font-family: "Roboto", sans-serif;
-            color:#707070;
-            margin-right: 3%;
+            color: #3c2b1c;
+        }
+        @include pc {
+            font-size: 0.8vw;
+        }
+    }
+
+    .p-pagenation__prev {
+        margin-right: 1%;
+        @include pc {
+            margin-right: 0.2%;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &::after {
+                content: "前へ";
+                font-size: 4vw;
+                @include ipad {
+                    display: none;
+                }
+            }
+            span {
+                display: block;
+                width: 3vw;
+                height: 3vw;
+                border-bottom: 1px #3c2b1c solid;
+                border-left: 1px #3c2b1c solid;
+                transform: rotate(45deg);
+                @include ipad {
+                    width: 1.3vw;
+                    height: 1.3vw;
+                }
+                @include pc {
+                    width: 0.6vw;
+                    height: 0.6vw;
+                }
+            }
         }
     }
     .p-pagenation__pagenumber {
         display: none;
         @include ipad {
-            display: flex;
-            justify-content: space-around;
-            li{
-                border:1px #707070 solid;
-                margin: 0 2%;
-                a{
-                    display: block;
-                    font-size: 1vw;
-                    font-weight: bold;
-                    color: #707070;
-                    width:4vw;
-                    height:4vw;
-                    text-align: center;
-                    
-                } 
+            display: block;
+            margin: 0 1%;
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1vw;
+                font-family: "Roboto", sans-serif;
+                width: 4.2vw;
+                height: 4.2vw;
+                border: 1px #3c2b1c solid;
+                color: #3c2b1c;
+
+                @include pc {
+                    width: 1.8vw;
+                    height: 1.8vw;
+                }
             }
         }
-    }
-    .p-pagenation__prev {
-        margin-right: 2%;
-        a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            &::after{
-                content:"前へ";
-                font-size: 4vw;
-                @include ipad{
-                    display:none;
-                }
-            }
-            span {
-                display: block;
-                width: 3vw;
-                height: 3vw;
-                border-bottom: 1px #707070 solid;
-                border-left: 1px #707070 solid;
-                transform: rotate(45deg);
-                @include ipad{
-                    width:1.3vw;
-                    height:1.3vw;
-                }
-            }
+        @include pc {
+            margin: 0 0.7%;
         }
     }
     .p-pagenation__next {
-        margin-left: 2%;
+        margin-left: 1%;
+        @include pc {
+            margin-left: 0.2%;
+        }
         a {
             display: flex;
             justify-content: center;
             align-items: center;
-            &::before{
-                content:"次へ";
+            &::before {
+                content: "次へ";
                 font-size: 4vw;
-                @include ipad{
-                    display:none;
+                @include ipad {
+                    display: none;
                 }
             }
             span {
                 display: block;
                 width: 3vw;
                 height: 3vw;
-                border-top: 1px #707070 solid;
-                border-right: 1px #707070 solid;
+                border-top: 1px #3c2b1c solid;
+                border-right: 1px #3c2b1c solid;
                 transform: rotate(45deg);
-                @include ipad{
-                    width:1.3vw;
-                    height:1.3vw;
+                @include ipad {
+                    width: 1.3vw;
+                    height: 1.3vw;
+                }
+                @include pc {
+                    width: 0.6vw;
+                    height: 0.6vw;
                 }
             }
         }
+    }
+}
+.p-pagenation__pagenumber.is-active {
+    a {
+        background-color: #3c2b1c;
+        color: #ffffff;
     }
 }
