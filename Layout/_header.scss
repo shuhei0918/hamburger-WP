@@ -31,6 +31,7 @@
         display: flex;
         justify-content: space-between;
         width: 85%;
+        min-width: 320px;
         @include ipad {
             padding: 0px 6% 0px 4%;
             flex-direction: row;

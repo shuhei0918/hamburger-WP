@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-
+    min-width: 375px;
     @include pc {
         display: grid;
         grid-template-columns: 81.2% 18.8%;

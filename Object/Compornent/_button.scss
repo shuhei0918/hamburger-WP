@@ -1,5 +1,6 @@
 .c-button{
-    display:inline-block;
+    display:block;
+    align-items: center;
     height: 46px;
     background-color: #F2EDE9;
     font-size: 16px;
@@ -18,8 +19,8 @@
 }
 .c-button--archive{
     margin: 0 auto;
-    width:48%;
-    height:12%;
+    width:163px;
+    height:42px;
     background-color: #ffffff;
     color: #707070;
     border-radius: 12vw;
@@ -29,13 +30,13 @@
         width: 100%;
         height:100%;
         text-align: center;
-        line-height: 12vw;
+        line-height: 2.5;
     }
     @include ipad{
         width:19vw;
-        height:5.2vw;
+        height:5vw;
         a{
-            font-size: 2vw;
+            font-size: 1.91vw;
             line-height: 5.2vw;
         }  
     }
@@ -43,7 +44,7 @@
         width:15.3vw;
         height:3.8vw;
         a{
-            font-size: 0.8vw;
+            font-size: 0.83vw;
             line-height: 4vw;
         }
 

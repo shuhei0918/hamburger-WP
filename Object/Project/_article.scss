@@ -9,51 +9,54 @@
 }
 
 .p-article__index {
+    margin: 5.3% 5.3% 13%;
     @include ipad {
+        margin: 4.8%;
         display: flex;
         justify-content: space-between;
+    }
+    @include pc {
+        margin: 5.6% 5.8% 7%;
     }
 }
 
 .p-article__archive {
+    margin: 8.9% 5.3% 9.2% 6.5%;
     color: #3c2a10;
     h2 {
-        font-size: 6.5vw;
-        font-weight: 400;
+        font-size: 28px;
+        font-weight: 600;
         letter-spacing: 0.04em;
-        line-height: 16vw;
     }
     p {
-        font-size: 4vw;
-        padding: 7vw 0 28vw;
+        font-size: 16px;
+        margin:8.95% 0 5.6%
     }
     @include ipad {
+        margin: 4.3% 4.2% 3.6% 5.1%
         h2 {
-            font-size: 3.8vw;
-            line-height: 5.4vw;
+            font-size: 4.31vw;
             letter-spacing: 0;
         }
         p {
-            font-size: 2vw;
-            padding-top: 2.6vw;
+            font-size: 1.91vw;
+            margin:3% 0 4.4%
         }
     }
     @include pc {
-        margin: 1.6vw 4.8vw;
+        margin: 3.125% 5.2% 3.33%;
         h2 {
-            font-size: 1.7vw;
-            line-height: 0;
-            padding-top: 2.6vw;
+            font-size: 1.875vw;
         }
         p {
-            font-size: 0.8vw;
-            padding: 2.6vw 0 3.8vw 0;
+            font-size: 0.83vw;
+            margin: 1.3% 0 3.64%;
         }
     }
 }
-.p-article__single{
+.p-article__single {
     margin-top: 0;
-    @include ipad{
-        margin-top:30px;
+    @include ipad {
+        margin-top: 30px;
     }
 }

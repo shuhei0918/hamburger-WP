@@ -14,12 +14,12 @@
         display: none;
         @include ipad {
             display: flex;
-            font-size: 2vw;
+            font-size: 1.91vw;
             font-family: "Roboto", sans-serif;
             color: #3c2b1c;
         }
         @include pc {
-            font-size: 0.8vw;
+            font-size: 0.83vw;
         }
     }
 

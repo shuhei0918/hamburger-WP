@@ -3,8 +3,9 @@
     font-weight: 600;
     font-family: "Roboto", sans-serif;
     position: absolute;
-    top: 0%;
-    right: 4%;
+    top: 0.8%;
+    right: 8.2%;
+    cursor: pointer;
     @include ipad {
         font-size:34px;
         right: 3%;
