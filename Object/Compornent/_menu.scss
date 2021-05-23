@@ -1,0 +1,54 @@
+.c-menu__open {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    top: 0.8%;
+    right: 8.2%;
+    cursor: pointer;
+    @include ipad {
+        font-size:34px;
+        right: 3%;
+    }
+    @include pc {
+        display: none;
+    }
+}
+
+#c-menu__open {
+    display: none;
+}
+
+.c-menu__close {
+    position: relative;
+}
+
+.c-menu__close span:before,
+.c-menu__close span:after {
+    top: 3vw;
+    right: -73vw;
+    position: absolute;
+    display: block;
+    content: "";
+    background-color: #707070;
+    width: 1.5vw;
+    height: 11vw;
+    @include ipad {
+        width: 0.7vw;
+        height: 5.5vw;
+        top: 3vw;
+        right: -36vw;
+    }
+    @include pc {
+        display: none;
+    }
+}
+.c-menu__close span:before {
+    transform: rotate(45deg);
+}
+.c-menu__close span:after {
+    transform: rotate(-45deg);
+}
+#c-menu__close {
+    display: none;
+}

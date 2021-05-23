@@ -1,0 +1,9 @@
+.l-main {
+    width: 100%;
+    background-color: #fffdfa;
+    @include ipad {
+    }
+    @include pc {
+        width: 100%;
+    }
+}

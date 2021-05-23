@@ -1,0 +1,104 @@
+.l-sidebar {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    font-family: "M PLUS 1p", sans-serif;
+    color: #707070;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    transition-property: left;
+    transition-duration: 0.2s;
+    height: 100%;
+
+    .l-sidebar__hide {
+        width: 18vw;
+        background: #000000;
+        opacity: 0.5;
+        @include ipad {
+            width: 58vw;
+        }
+        @include pc {
+            display: none;
+        }
+    }
+    .l-sidebar__gmenu {
+        width: 82vw;
+        background-color: #f2ede9;
+        @include ipad {
+            width: 42vw;
+        }
+        h2 {
+            display: none;
+            @include pc {
+                display: block;
+                font-family: "Roboto", sans-serif;
+                font-size: 34px;
+                font-weight: 600;
+                line-height: 1.6;
+                padding:82px 0 65px 46px;
+            }
+        }
+    }
+    @include pc {
+        position: static;
+        grid-area: sidebar;
+        height: 100%;
+        width: 100%;
+    }
+    .l-sidebar__main {
+        padding-bottom: 10vw;
+        @include pc {
+            padding-top: 0;
+        }
+    }
+    .l-sidebar__main li {
+        padding-left: 12%;
+        padding-bottom: 1%;
+        a {
+            display: block;
+            line-height: 3.6;
+            font-weight: 700;
+            font-size: 5.8vw;
+            color:#707070;
+            @include ipad {
+                font-size: 2.7vw;
+                line-height: 3.4;
+            }
+            @include pc {
+                font-size: 1.2vw;
+                line-height: 4;
+            }
+        }
+    }
+    .l-sidebar__sub li {
+        padding-left: 10%;
+        padding-bottom: 0px;
+        a {
+            margin-bottom: 0px;
+            font-weight: 400;
+            font-size: 5vw;
+            line-height: 2.6;
+            color:#707070;
+            @include ipad {
+                font-size: 2.6vw;
+                line-height: 2.3;
+            }
+            @include pc {
+                font-size: 1vw;
+                line-height: 2.6;
+            }
+        }
+    }
+}
+.l-sidebar.is-open {
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition-property: display, left;
+    transition-duration: 0.2s;
+    .l-sidebar__gmenu {
+        overflow: scroll;
+        min-height: 100vh;
+    }
+}

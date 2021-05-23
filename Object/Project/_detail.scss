@@ -1,0 +1,245 @@
+.p-detail {
+    h2 {
+        font-size: 28px;
+        padding: 30px 0;
+        @include ipad {
+            font-size: 4.31vw;
+            padding: 3.11% 0;
+        }
+        @include pc {
+            font-size: 1.875vw;
+            padding: 1.67% 0;
+        }
+    }
+    h3 {
+        font-size: 24px;
+        padding: 17px 0 15px;
+        @include ipad {
+            font-size: 3.35vw;
+            padding: 3.6% 0;
+        }
+        @include pc {
+            font-size: 1.46vw;
+            padding: 1.93% 0;
+        }
+    }
+    h4,
+    h5,
+    h6 {
+        font-size: 20px;
+        padding: 14.5px 0;
+        @include ipad {
+            font-size: 2.4vw;
+            padding: 3.53% 0;
+        }
+        @include pc {
+            font-size: 1vw;
+            padding: 1.9% 0;
+        }
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+        margin: 15px 0;
+        @include ipad {
+            margin: 1.8% 0;
+        }
+        @include pc {
+            margin: 0.97% 0;
+        }
+    }
+    .p-detail__blockquote {
+        background-color: #f5f5f5;
+        padding: 30px 20px 0;
+        margin: 15px 0;
+        @include ipad {
+            padding: 7% 7% 0;
+        }
+        @include pc{
+            padding:2.96% 3.7% 0;
+        }
+        p {
+            padding:0 0 30px 0;
+            @include ipad {
+                font-size: 1.92vw;
+                padding:0 0 8.4% 0;
+            }
+            @include pc{
+                font-size: 0.84vw;
+                padding: 0.74% 0 3.7% 0;
+            }
+            a {
+                text-decoration: underline blue;
+                color: blue;
+            }
+        }
+        @include ipad {
+            margin: 1.8% 0;
+        }
+        @include pc {
+            margin: 0.97% 0;
+        }
+    }
+    p {
+        @include ipad {
+            padding: 30px 0;
+        }
+    }
+    .p-detail__textbox {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0;
+        @include ipad{
+
+        }
+        p {
+            width: 53%;
+            padding: 0;
+            @include ipad {
+                width: 54%;
+            }
+        }
+        img {
+            max-width: 47%;
+            height: auto;
+            margin: 0;
+            @include ipad {
+                max-width: 43%;
+            }
+        }
+    }
+    .p-detail__flexbox {
+        display: flex;
+        flex-direction: column;
+        @include ipad {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        img {
+            margin: 10px 0;
+            width: 100%;
+            @include ipad {
+                width: 48%;
+                @include pc {
+                    width: 32%;
+                }
+            }
+        }
+    }
+    ol {
+        
+        list-style-type: decimal;
+        margin: 30px 20px;
+        @include ipad {
+            font-size: 1.91vw;
+            margin: 3.94% 6.58%;
+        }
+        @include pc{
+            font-size: 0.84vw;
+            margin: 2.3% 3.8%;
+        }
+        li {
+            ol {
+                margin-left: 18px;
+                @include ipad {
+                    margin: 3% 2.7%;
+                }
+                @include pc{
+                    margin:1.66% 1.48%;
+                }
+            }
+        }
+    }
+    ul {
+        list-style: none;
+        margin: 30px 0;
+        @include ipad {
+            font-size: 1.91vw;
+            margin: 3.94% 3.9%;
+        }
+        @include pc{
+            font-size: 0.84vw;
+            margin: 2.3% 3.8%;
+        }
+        li {
+            ul {
+                margin-left: 18px;
+                @include ipad {
+                    margin: 3% 2.7%;
+                }
+                @include pc{
+                    margin:1.66% 1.48%;
+                }
+            }
+        }
+    }
+    pre {
+        margin: 15px 0;
+        background-color: #f5f5f5;
+        pre {
+            padding: 50px;
+        }
+    }
+    table {
+        margin: 30px 0;
+        border-collapse: collapse;
+        width: 100%;
+        @include ipad{
+            font-size: 1.91%;
+        }
+        @include ipad{
+            font-size: 0.84%;
+        }
+        tbody {
+            tr {
+                border: solid 1px #707070;
+                th {
+                    height: 77px;
+                    font-weight: 400;
+                    width: 40%;
+                    border: solid 1px #707070;
+                    padding-left: 30px;
+                    text-align: left;
+                    @include ipad {
+                        width: 30%;
+                    }
+                    @include pc {
+                        width: 31.5%;
+                    }
+                }
+                td {
+                    height: 77px;
+                    width: 60%;
+                    border: solid 1px #707070;
+                    padding-left: 30px;
+                    @include ipad {
+                        width: 70%;
+                    }
+                    @include pc {
+                        width: 68.5%;
+                    }
+                }
+            }
+        }
+    }
+    .p-detail__section {
+        margin-top: 30px;
+        @include ipad{
+            margin-top: 7.9%;
+        }
+        @include pc {
+            margin-top: 4.54%;
+        }
+    }
+    .p-detail__img--small {
+        text-align: center;
+        img {
+            width: 80%;
+            height: auto;
+            @include pc {
+                width: 43%;
+            }
+        }
+    }
+}
