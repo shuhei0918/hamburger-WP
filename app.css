@@ -288,7 +288,6 @@ body.is-open {
 }
 
 .l-sidebar .l-sidebar__main li a {
-  display: block;
   line-height: 3.6;
   font-weight: 700;
   font-size: 5.8vw;
