@@ -5,16 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Foundation/ress.css">
-    <link rel="stylesheet" href="app.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Roboto:wght@400;500&display=swap"
-        rel="stylesheet">
-    <script src="Foundation/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/5ab7618b37.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <?php wp_head(); ?>
 </head>
 
 <body <?php body_class( $class ); ?>>

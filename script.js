@@ -1,4 +1,4 @@
-$(function(){
+(function($){
     $('input[name="c-menu"]').change(function(){
 
         var open = $('#c-menu__open').prop('checked');
@@ -25,4 +25,4 @@ $(function(){
             $('#c-menu__close').prop('checked',true);
         }
     });
-});
+})(jQuery);

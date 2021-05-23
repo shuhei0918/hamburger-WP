@@ -153,6 +153,7 @@ body.is-open {
   font-size: 40px;
   line-height: 3.3;
   text-align: center;
+  text-decoration: none;
 }
 
 @media (min-width: 835px) {
