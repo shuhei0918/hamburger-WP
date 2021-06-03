@@ -1,10 +1,14 @@
 <?php get_header(); ?>
         <main class="l-main">
             <section class="p-top__single p-top p-top__post">
-                <h1>h1 チーズバーガー</h1>
+                <?php the_post_thumbnail( "full",array("alt" => get_the_title(), "class" => "p-top p-top__single p-top__post")); ?>
+                <h1><?php the_title(); ?></h1>
             </section>
             <article class="p-article__single p-article">
                 <div class="p-detail">
+                <?php if(have_posts()): while(have_posts()): the_post(); ?>
+                    <?php the_content(); ?>
+                    <?php endwhile; else: ?><P>表示する記事がありません</p><?php endif; ?>
                     <h2>見出しh2</h2>
                     <p>Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。</p>
                     <h3>見出しh3</h3>

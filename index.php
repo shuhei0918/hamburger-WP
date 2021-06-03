@@ -5,7 +5,11 @@
             </section>
             <article class="p-article__index p-article">
                 <article class="c-content-index c-content-index__takeout">
-                    <h2>Take Out</h2>
+                    <?php
+                        $category_id = get_cat_ID('Take Out');
+                        $category_link = get_category_link($category_id);
+                    ?>
+                    <h2><a href="<?php echo esc_url($category_link); ?>"title="Take Out">Take Out</a></h2>
                     <div class="c-content-index__selectinfo">
                         <section class="c-content-index__infobox">
                             <h3>小見出しが入ります</h3>
@@ -18,7 +22,11 @@
                     </div>
                 </article>
                 <article class="c-content-index c-content-index__eatin">
-                    <h2>Eat In</h2>
+                <?php
+                        $category_id = get_cat_ID('Eat In');
+                        $category_link = get_category_link($category_id);
+                    ?>
+                    <h2><a href="<?php echo esc_url($category_link); ?>"title="Eat In">Eat In</a></h2>
                     <div class="c-content-index__selectinfo">
                         <section class="c-content-index__infobox">
                             <h3>小見出しが入ります</h3>

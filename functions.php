@@ -22,4 +22,17 @@
         wp_enqueue_script( 'script',get_template_directory_uri().'/script.js', array());
     }
     add_action('wp_enqueue_scripts','hamburger_script');
+
+    function widgets_init(){
+        register_sidebar(
+            array(
+                'name'          =>'カテゴリーウィジェット',
+                'id'            =>'category_widget',
+                'description'   =>'カテゴリー用ウィジェット',
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</div>'
+            )
+        );
+    }
+    add_action('widgets_init','widgets_init');
      ?>

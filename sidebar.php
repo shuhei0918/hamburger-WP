@@ -4,7 +4,12 @@
             <input type="radio" name="c-menu" id="c-menu__close" checked>
             <label for="c-menu__close" class="c-menu__close"><span></span></label>
             <h2>Menu</h2>
-            <ul class="l-sidebar__main p-sidebar__main">
+            <ul  class="l-sidebar__main p-sidebar__main">
+            <?php
+                wp_list_categories( 'exclude=1,2,3&title_li=&orderby=ID'); 
+            ?>
+            <ul>
+            <!-- <ul class="l-sidebar__main p-sidebar__main">
                 <li><a href="">バーガー</a>
                     <ul class="l-sidebar__sub p-sidebar-sub">
                         <li><a href="">ハンバーガー</a></li>
@@ -34,6 +39,6 @@
                         <li><a href="">コーヒー (Ice/Hot)</a></li>
                     </ul>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </nav>

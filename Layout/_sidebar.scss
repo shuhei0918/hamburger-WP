@@ -36,7 +36,7 @@
                 font-size: 34px;
                 font-weight: 600;
                 line-height: 1.6;
-                padding:82px 0 65px 46px;
+                padding:82px 0 50px 46px;
             }
         }
     }
@@ -47,7 +47,7 @@
         width: 100%;
     }
     .l-sidebar__main {
-        padding-bottom: 10vw;
+        padding:190px 0  10vw;
         @include pc {
             padding-top: 0;
         }

@@ -39,6 +39,10 @@
         font-weight: 500;
         padding-left: 3%;
         line-height: 2;
+        a{
+            text-decoration: none;
+            color:#ffffff;
+        }
         @include ipad {
             font-size: 5vw;
         }
