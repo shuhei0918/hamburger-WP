@@ -7,6 +7,7 @@
         register_nav_menus(array(
             'main' => 'Main Menu',
             'side' => 'Side Menu',
+            'foot' => 'Footer Menu'
         ));
     }
     add_action('after_setup_theme', 'register_my_menus');
@@ -76,4 +77,16 @@
         }
     }
     add_action('save_post', 'default_thumbnail');
+
+    function show_page_number(){
+        global $wp_query;
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $max_page = $wp_query -> max_num_pages;
+    }
+    function max_show_page_number(){
+        global $wp_query;
+        $max_page = $wp_query -> $max_num_pages;
+        echo $max_page;        
+    }
+
 ?>
