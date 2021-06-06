@@ -1,22 +1,25 @@
 <?php get_header(); ?>
 <main class="l-main">
-
     <section class="p-top__archive p-top">
-        <h1>Menu:</h1>
-        <h3>
-            <?php
-                if(isset($_GET['s']) && empty($_GET['s'])){
-                    echo '未入力';
-                } else {
-                    echo '"'.$_GET['s'].'"';
-                }
-            ?>
-        </h3>
+        <div class="p-top__inner">
+            <h1>Search:</h1>
+            <h3>
+                <?php
+                    if(isset($_GET['s']) && empty($_GET['s'])){
+                        echo '未入力';
+                    } else {
+                        echo '"'.$_GET['s'].'"';
+                    }
+                ?>
+            </h3>
+        </div>
     </section>
     <article class="p-article__archive p-article">
         <h2>小見出しが入ります</h2>
-        <p>テキストが入ります。テキストが入ります。テキストが入ります。</p>
-        <?php if (have_posts()) : 
+        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+        </p>
+        <?php
+            if (have_posts()) : 
             while (have_posts()) :
                 the_post(); ?>
                 <article class="c-card" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

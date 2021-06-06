@@ -1,6 +1,6 @@
 <footer class="l-footer">
         <a>ショップ情報｜ヒストリー</a>
-        <p>Copyright: RaiseTech</p>
+        <p><small>Copyright: RaiseTech</small></p>
     </footer>
 
 

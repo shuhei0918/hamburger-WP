@@ -3,7 +3,11 @@
     <section class="p-top__archive p-top">
         <div class="p-top__inner">
             <h1>Menu:</h1>
-            <h3><?php echo get_search_query( $escaped ); ?></h3>
+            <h3>
+                <?php
+                    the_archive_title();
+                ?>
+            </h3>
         </div>
     </section>
     <article class="p-article__archive p-article">
@@ -11,7 +15,7 @@
         <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
         </p>
         <?php
-        if (have_posts()) :
+            if (have_posts()) :
             while (have_posts()) :
                 the_post(); ?>
                 <article class="c-card" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -32,13 +36,6 @@
             ?><p>表示する記事がありません</p><?php
                                         endif;
                                             ?>
-    </article>
-
-    <?php
-    the_posts_pagination(array(
-        'mid_size' => 2,
-    ));
-    ?>
 
     <div class="p-pagenation">
         <?php
