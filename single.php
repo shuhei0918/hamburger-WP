@@ -7,9 +7,13 @@
             <article class="p-article__single p-article">
                 <div class="p-detail">
                 <?php if(have_posts()): while(have_posts()): the_post(); ?>
+                <h1><?php the_title(); ?></h1>
+                    <div class="p-detail__tag"><?php the_tags(""," ",) ?></div>
                     <?php the_content(); ?>
+                    <?php wp_link_pages(); ?>
+                    <?php comments_template(); ?>
                     <?php endwhile; else: ?><P>表示する記事がありません</p><?php endif; ?>
-                    <h2>見出しh2</h2>
+                   <!--  <h2>見出しh2</h2>
                     <p>Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。Pタグテキスト。</p>
                     <h3>見出しh3</h3>
                     <h4>見出しh4</h4>
@@ -110,8 +114,9 @@
                     <input type="submit" value="ボタン" class="c-button c-button--single" href="#">
                     <p style="font-weight: bold;">boldboldboldboldboldbold</p>
                 </div>
-            </div>
-
+            </div> -->
+            
+            </article>
         </main>
     </div>
    <?php get_sidebar(); ?>

@@ -45,6 +45,76 @@ body.is-open {
   position: fixed;
 }
 
+.wp-caption, .gallery-caption {
+  font-size: 1.3rem;
+}
+
+.wp-caption-text {
+  margin-top: -20px;
+}
+
+.sticky {
+  padding: 10px;
+  border: solid #000 2px;
+}
+
+.bypostauthor {
+  background-color: #fff7ef;
+}
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1rem;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1rem;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #eee;
+  clip: auto !important;
+  -webkit-clip-path: none;
+          clip-path: none;
+  color: #444;
+  display: block;
+  font-size: 1em;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
 .l-footer {
   height: 150px;
   color: #ffffff;
@@ -784,13 +854,13 @@ body.is-open {
 
 @media (min-width: 376px) {
   .p-article {
-    margin: 4.8vw 4.4vw 0.2vw;
+    margin: 6vw 5.8vw 1.8vw;
   }
 }
 
 @media (min-width: 835px) {
   .p-article {
-    margin: 6vw 5.8vw 1.8vw;
+    margin: 4.8vw 4.4vw 0.2vw;
   }
 }
 
@@ -1649,5 +1719,106 @@ body.is-open {
   .p-detail .p-detail__img--small img {
     width: 43%;
   }
+}
+
+.p-detail .p-detail__tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.p-detail .p-detail__tag a {
+  display: block;
+  padding: 3px;
+  background-color: #707070;
+  color: #ffffff;
+  margin: 0 1%;
+}
+
+.p-postlink {
+  margin: 5% 5% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.p-postlink .post-page-numbers {
+  margin: 0 1%;
+  text-align: center;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border: solid 1px #707070;
+}
+
+@media (min-width: 376px) {
+  .p-postlink .post-page-numbers {
+    font-size: 1.91vw;
+    width: 4.2vw;
+    height: 4.2vw;
+    line-height: 4.2vw;
+  }
+}
+
+@media (min-width: 835px) {
+  .p-postlink .post-page-numbers {
+    font-size: 0.83vw;
+    width: 1.82vw;
+    height: 1.82vw;
+    line-height: 1.82vw;
+  }
+}
+
+.p-postlink .current {
+  color: #ffffff;
+  background-color: #707070;
+  font-weight: 700;
+}
+
+.p-comment .comment-respond {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.p-comment .comment-respond p {
+  padding: 15px 0;
+}
+
+.p-comment .comment-respond h3 {
+  text-align: center;
+}
+
+.p-comment .comment-respond form .logged-in-as {
+  font-size: 8px;
+  padding: 0;
+}
+
+.p-comment .comment-respond form .comment-form-comment label {
+  display: none;
+}
+
+.p-comment .comment-respond form .comment-form-comment textarea {
+  background-color: #ffffff;
+  width: 100%;
+  border: solid 1px #707070;
+}
+
+.p-comment .comment-respond form .form-submit input {
+  padding: 10px;
+  display: block;
+  text-align: center;
+  background-color: #f2ede9;
+  border: solid 1px #707070;
 }
 /*# sourceMappingURL=app.css.map */

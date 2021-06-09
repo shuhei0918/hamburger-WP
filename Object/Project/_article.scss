@@ -1,11 +1,12 @@
 .p-article {
     margin: 4.8vw 5vw 13vw;
     @include ipad {
-        margin: 4.8vw 4.4vw 0.2vw;
-    }
-    @include pc {
         margin: 6vw 5.8vw 1.8vw;
     }
+    @include pc {
+        margin: 4.8vw 4.4vw 0.2vw;
+    }
+   
 }
 
 .p-article__index {

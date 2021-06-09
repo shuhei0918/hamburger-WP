@@ -1,6 +1,9 @@
 <?php
     add_theme_support("title-tag");
     add_theme_support('post-thumbnails');
+    add_theme_support('automatic-feed-links');
+    add_editor_style(  );
+
 
     function register_my_menus()
     {
@@ -88,5 +91,7 @@
         $max_page = $wp_query -> $max_num_pages;
         echo $max_page;        
     }
+
+    if(!isset($content_width))$content_width = 1920;
 
 ?>

@@ -1,0 +1,30 @@
+.p-postlink{
+    margin: 5% 5% 5%;
+    display:flex;
+    justify-content: center;
+    .post-page-numbers{
+        margin: 0 1%;
+        text-align: center;
+        display:block;
+        width:26px;
+        height:26px;
+        border: solid 1px #707070;
+        @include ipad{
+            font-size: 1.91vw;
+            width:4.2vw;
+            height:4.2vw;
+            line-height: 4.2vw;
+        }
+        @include pc{
+            font-size: 0.83vw;
+            width: 1.82vw;
+            height: 1.82vw;
+            line-height: 1.82vw;
+        }
+    }
+    .current{
+        color:#ffffff;
+        background-color: #707070;
+        font-weight: 700;
+    }
+}

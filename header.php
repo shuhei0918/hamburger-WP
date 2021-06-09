@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html <?php language_attributes(); ?>>
 
 <head>
     <meta charset="UTF-8">
@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://kit.fontawesome.com/5ab7618b37.js" crossorigin="anonymous"></script>
+    <?php if(is_singular()) wp_enqueue_script("comment-reply"); ?>
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class( $class ); ?>>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
     <div class="l-base">
         <header class="l-header p-header">
             <input type="radio" name="c-menu" id="c-menu__open">

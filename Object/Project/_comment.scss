@@ -1,0 +1,36 @@
+.p-comment {
+    .comment-respond {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        p{
+            padding:15px 0;
+        }
+        h3 {
+            text-align: center;
+        }
+        form {
+            .logged-in-as {
+                font-size: 8px;
+                padding: 0;
+            }
+            .comment-form-comment {
+                label {
+                    display: none;
+                }
+                textarea {
+                    background-color: #ffffff;
+                    width: 100%;
+                    border: solid 1px #707070;
+                }
+            }
+            .form-submit input{
+                padding:10px;
+                display:block;
+                text-align: center;
+                background-color: #f2ede9;
+                border: solid 1px #707070;
+            }
+        }
+    }
+}
