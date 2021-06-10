@@ -216,7 +216,8 @@ body.is-open {
   }
 }
 
-.l-header h1 {
+.l-header h1 a {
+  color: #707070;
   font-family: "Roboto", sans-serif;
   font-size: 40px;
   line-height: 3.3;
@@ -224,8 +225,12 @@ body.is-open {
   text-decoration: none;
 }
 
+.l-header h1 a :visited {
+  color: #707070;
+}
+
 @media (min-width: 835px) {
-  .l-header h1 {
+  .l-header h1 a {
     font-weight: 700;
   }
 }
@@ -606,6 +611,8 @@ body.is-open {
 .c-card .c-card__img img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .c-card .c-card__outline {
@@ -983,27 +990,31 @@ body.is-open {
 }
 
 .p-top__index {
-  background-image: url("img/index-top_iphone.png");
+  display: block;
+  padding: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
 }
 
-.p-top__index::after {
-  content: "";
-  display: block;
-  padding-top: 76%;
+.p-top__index h2 {
+  position: absolute;
+  top: 50%;
+  left: 6%;
+}
+
+.p-top__index img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 375px;
+  height: 285px;
 }
 
 @media (min-width: 376px) {
-  .p-top__index {
-    background-image: url("img/index-top_ipad.png");
-  }
-  .p-top__index::after {
-    padding-top: 34%;
-  }
-}
-
-@media (min-width: 835px) {
-  .p-top__index {
-    background-image: url("img/index-top_pc.png");
+  .p-top__index img {
+    width: 100%;
+    height: 100%;
   }
 }
 

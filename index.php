@@ -1,6 +1,7 @@
 <?php get_header(); ?>
         <main class="l-main">
             <section class="p-top__index p-top">
+                <img src="<?php header_image(); ?>">
                 <h2>ダミーサイト</h2>
             </section>
             <article class="p-article__index p-article">

@@ -16,12 +16,16 @@
         align-items: center;
         justify-content: space-between;
     }
-    h1 {
+    h1 a{
+        color:#707070;
         font-family: "Roboto", sans-serif;
         font-size: 40px;
         line-height: 3.3;
         text-align: center;
         text-decoration: none;
+        :visited{
+            color: #707070;
+        }
         @include ipad {
         }
         @include pc {
