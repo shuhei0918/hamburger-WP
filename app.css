@@ -644,6 +644,8 @@ body.is-open {
 }
 
 .c-card .c-card__outline .c-card__contents p, .c-card .c-card__outline .c-card__contents h2 {
+  font-size: 16px;
+  font-weight: 400;
   padding: 0 19vw 0 0;
 }
 
